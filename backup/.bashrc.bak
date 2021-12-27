@@ -134,8 +134,3 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # dev env
 export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
-
-# git
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m "$1""
