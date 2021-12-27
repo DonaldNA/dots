@@ -139,3 +139,4 @@ export PATH=$PATH:/usr/local/go/bin
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m "$1""
+alias gp="git push origin "$1""
