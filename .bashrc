@@ -140,3 +140,5 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m "$1""
 alias gp="git push origin "$1""
+
+set -o vi

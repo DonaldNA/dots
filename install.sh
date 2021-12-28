@@ -2,7 +2,7 @@
 
 declare -a dots
 
-dots=(".vimrc" ".bashrc" ".tmux.conf")
+dots=(".vimrc" ".bashrc" ".tmux.conf" ".inputrc")
 
 
 rmdir "$HOME"/dots/backup
