@@ -119,8 +119,12 @@ fi
 alias ..="cd .."
 alias ....="cd ../.."
 
+
+# add vim to bash cli
 export EDITOR=vi
 export VISUAL=vi
+set -o vi
+
 
 # Colored Man Pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -141,4 +145,3 @@ alias ga="git add"
 alias gc="git commit -m "$1""
 alias gp="git push origin "$1""
 
-set -o vi
