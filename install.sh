@@ -4,15 +4,22 @@ declare -a dots
 
 dots=(".vimrc" ".bashrc" ".tmux.conf" ".inputrc")
 
-
-rmdir "$HOME"/dots/backup
-mkdir "$HOME"/dots/backup
+## Check if a directory does not exist ###
+echo "Checking backup dir exists..."
+if [ ! -d "$HOME"/dots/backup ]
+then
+    echo "Creating backup dir"
+    mkdir "$HOME"/dots/backup
+fi
 
 for i in "${dots[@]}"
 do
   echo "Working on $i"
   prod_dot="$HOME"/"$i"
-  cp "$prod_dot" "$HOME"/dots/backup/"$i".bak
+
+  #TODO Add datestamp to new filename
+  today=$(date +"%Y-%m-%d")
+  cp "$prod_dot" "$HOME"/dots/backup/"$i"_"$today".bak
   rm "$prod_dot"
   ln -s "$HOME"/dots/"$i" "$HOME"
 done
