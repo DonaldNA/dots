@@ -146,9 +146,26 @@ alias gc="git commit -m "$1""
 alias gp="git push origin "$1""
 
 
-Workstation specific commands
+#Workstation specific commands
 ###########################################################################
-if [[ "$HOSTNAME" -eq "ubuntu1" ]]; then
+if [ "$HOSTNAME" == "ubuntu1" ]; then
     alias ds="docker rm -f dash && docker run --rm -d --name dash --network npm_default dash"
 fi
+
+if [ "$HOSTNAME" == "webServer.donaldallen.xyz" ]; then
+    alias build="cd ~ && ./donald_build_hugo.sh"
+    alias clean="exiftool -all="
+    alias ng="sudo nginx -t && sudo systemctl reload nginx.service"
+    alias df="df -h --exclude=squashfs"
+fi
+
+
+alias sc="sudo systemctl"
 alias upd="docker run --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --debug"
+
+
+# #swap caps lock and escape for vim
+test -n "$DISPLAY" && setxkbmap -option caps:escape &>/dev/null
+isosec() {
+    date -u +%Y%m%d%H%M%S "$@" && export -f isosec
+}
