@@ -2,7 +2,7 @@
 
 declare -a dots
 
-dots=(".vimrc" ".bashrc" ".tmux.conf" ".inputrc")
+dots=(".git-prompt" ".vimrc" ".bashrc" ".tmux.conf" ".inputrc")
 
 ## Check if a directory does not exist ###
 echo "Checking backup dir exists..."
