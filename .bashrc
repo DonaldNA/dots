@@ -145,3 +145,10 @@ alias ga="git add"
 alias gc="git commit -m "$1""
 alias gp="git push origin "$1""
 
+
+Workstation specific commands
+###########################################################################
+if [[ "$HOSTNAME" -eq "ubuntu1" ]]; then
+    alias ds="docker rm -f dash && docker run --rm -d --name dash --network npm_default dash"
+fi
+alias upd="docker run --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --debug"
