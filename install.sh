@@ -24,3 +24,11 @@ do
   ln -s "$HOME"/dots/"$i" "$HOME"
 done
 
+
+## Check if a file does not exist ###
+echo "Checking backup dir exists..."
+if [ ! -f /usr/bin/local/z.sh ]
+then
+    echo "Getting z.sh"
+    wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O /usr/bin/local/z.sh
+fi
