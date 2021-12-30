@@ -151,8 +151,6 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m "$1""
 alias gp="git push origin "$1""
-# add git branch info to prompt
-source $HOME/.git-prompt.sh
 
 #Workstation specific commands
 ###########################################################################
@@ -171,6 +169,7 @@ fi
 alias sc="sudo systemctl"
 alias upd="docker run --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --debug"
 
+source /usr/local/bin/z.sh
 
 # #swap caps lock and escape for vim
 test -n "$DISPLAY" && setxkbmap -option caps:escape &>/dev/null
