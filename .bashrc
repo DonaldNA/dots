@@ -94,10 +94,7 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -123,8 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias ..="cd .."
-alias ....="cd ../.."
+
 
 
 # add vim to bash cli
@@ -146,11 +142,15 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
 
+
 # git
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit -m "$1""
-alias gp="git push origin "$1""
+gph() {
+    "git push origin $1"
+}
+
+gc() {
+    "git commit -m $1"
+}
 
 #Workstation specific commands
 ###########################################################################
@@ -166,8 +166,7 @@ if [ "$HOSTNAME" == "webServer.donaldallen.xyz" ]; then
 fi
 
 
-alias sc="sudo systemctl"
-alias upd="docker run --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --debug"
+
 
 source /usr/local/bin/z.sh
 
