@@ -145,11 +145,11 @@ export PATH=$PATH:/usr/local/go/bin
 
 # git
 gph() {
-    "git push origin $1"
+    git push origin "$1"
 }
 
 gc() {
-    "git commit -m $1"
+    git commit -m "$1"
 }
 
 #Workstation specific commands
