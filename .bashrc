@@ -154,16 +154,14 @@ gc() {
 
 #Workstation specific commands
 ###########################################################################
-if [ "$HOSTNAME" == "ubuntu1" ]; then
-    alias ds="docker rm -f dash && docker run --rm -d --name dash --network npm_default dash"
+if [ -f ~/.workstationSpecificBashenv]; then
+    echo "Sourcing workstaion Specific commands"
+    . ~/.workstationSpecificBashenv
 fi
 
-if [ "$HOSTNAME" == "webServer.donaldallen.xyz" ]; then
-    alias build="cd ~ && ./donald_build_hugo.sh"
-    alias clean="exiftool -all="
-    alias ng="sudo nginx -t && sudo systemctl reload nginx.service"
-    alias df="df -h --exclude=squashfs"
-fi
+
+
+
 
 
 
