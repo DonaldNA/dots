@@ -157,7 +157,7 @@ fi
 
 
 
-
+export PATH=$PATH:/usr/local/bin
 source /usr/local/bin/z.sh
 
 # #swap caps lock and escape for vim
