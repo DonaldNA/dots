@@ -154,7 +154,7 @@ gc() {
 
 #Workstation specific commands
 ###########################################################################
-if [ -f ~/.workstationSpecificBashenv]; then
+if [ -f ~/.workstationSpecificBashenv ]; then
     echo "Sourcing workstaion Specific commands"
     . ~/.workstationSpecificBashenv
 fi
