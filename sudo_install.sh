@@ -9,5 +9,5 @@ fi
 if [ ! -f /usr/local/bin/z.sh ]
 then
     echo "Getting z.sh"
-    wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O /usr/bin/local/z.sh
+    wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O /usr/local/bin/z.sh
 fi
