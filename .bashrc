@@ -143,32 +143,22 @@ export PATH=$PATH:/usr/local/go/bin
 . "$HOME/.cargo/env"
 
 
-# git
-gph() {
-    "git push origin $1"
-}
-
-gc() {
-    "git commit -m $1"
-}
 
 #Workstation specific commands
 ###########################################################################
-if [ "$HOSTNAME" == "ubuntu1" ]; then
-    alias ds="docker rm -f dash && docker run --rm -d --name dash --network npm_default dash"
+if [ -f ~/.workstationSpecificBashenv ]; then
+    echo "Sourcing workstaion Specific commands"
+    . ~/.workstationSpecificBashenv
 fi
 
-if [ "$HOSTNAME" == "webServer.donaldallen.xyz" ]; then
-    alias build="cd ~ && ./donald_build_hugo.sh"
-    alias clean="exiftool -all="
-    alias ng="sudo nginx -t && sudo systemctl reload nginx.service"
-    alias df="df -h --exclude=squashfs"
-fi
 
 export PATH="/home/donald/.local/bin:$PATH"
 
 
 
+
+
+export PATH=$PATH:/usr/local/bin
 source /usr/local/bin/z.sh
 
 # #swap caps lock and escape for vim
