@@ -165,6 +165,7 @@ if [ "$HOSTNAME" == "webServer.donaldallen.xyz" ]; then
     alias df="df -h --exclude=squashfs"
 fi
 
+export PATH="/home/donald/.local/bin:$PATH"
 
 
 
